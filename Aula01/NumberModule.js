@@ -3,4 +3,4 @@ let numberTwo = 2;
 
 let result = numberOne % numberTwo;
 
-console.log(result);
+console.log(result); // expected output: 0
