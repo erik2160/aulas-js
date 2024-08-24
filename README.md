@@ -8,7 +8,7 @@ Nesse projeto foi utilizado a biblioteca readline, para ler entradas do usuário
 através do terminal.
 
 Para instalar, digite no terminal:
-`npm init -y`
+`npm init -y`<br/>
 `npm install readline-sync`
 
 Para rodar um arquivo, digite no terminal:
