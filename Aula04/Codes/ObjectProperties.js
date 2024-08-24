@@ -1,5 +1,5 @@
-// cria o objeto pessoa com os atributos
-let pessoa = {
+// creates the person object with attributes
+let person = {
   nome: "John Doe",
   idade: 30,
   endereco: {
@@ -9,4 +9,4 @@ let pessoa = {
   },
 };
 
-console.log(pessoa);
+console.log(person);

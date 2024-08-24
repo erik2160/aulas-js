@@ -1,13 +1,13 @@
 /*
-Para rodar, use npm install readline-sync
-Depois no terminal, utilize node Calculadora.js
+To run, use npm install readline-sync
+Then in the terminal, use node PrimeNumber.js
 */
 
-const read = require('readline-sync'); // Importa a biblioteca para ler a entrada do usuário
+const read = require('readline-sync'); // Imports the library to read user input
 
-const number = parseInt(read.question("Insert the number: ")); // Pede para o usuário inserir o número
+const number = parseInt(read.question("Insert the number: ")); // Asks the user to insert a number
 
-// Chama a função isPrime para verificar se o número é primo e printa o resultado no console.
+// Calls the isPrime function to check if the number is prime and prints the result to the console.
 if (isPrime(number)) { 
     console.log(`${number} is a prime number.`);
 } else {
@@ -15,10 +15,10 @@ if (isPrime(number)) {
 }
 
 function isPrime(number) {
-    if (number <= 1) { // Se o número for menor ou igual a 1 ele não é considerado primo
+    if (number <= 1) { // If the number is less than or equal to 1, it is not considered prime
         return false;
     }
-    for (let i = 2; i <= Math.sqrt(number); i++) {  // Fórmula para calcular a primalidade de um número
+    for (let i = 2; i <= Math.sqrt(number); i++) {  // Formula to calculate the primality of a number
         if (number % i === 0) {
             return false;
         }

@@ -1,10 +1,10 @@
-let time = 10; // incia a variavel time
+let time = 10; // initializes the time variable
 
 while (time >= 1) {
-  // enquanto tempo nao for menor ou igual a 1
-  console.log(time); // printa o time
-  time--; // decrementa o time
+  // while time is not less than or equal to 1
+  console.log(time); // prints the time
+  time--; // decrements the time
 }
 
-// após o while print ao ano novo
-console.log("Feliz Ano Novo!");
+// after the while loop, print Happy New Year
+console.log("Happy New Year!");
