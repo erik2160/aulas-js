@@ -1,10 +1,3 @@
-const readline = require('readline');
-
-const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-});
-
 function sum(num) {
     for (let i = 1; i <= 10; i++) {
         console.log(`${i} + ${num} = ${i + num}`);
@@ -26,7 +19,7 @@ function skipNumber(num) {
     }
 }
 
-function sumArray(arr) {
+function sumArrayWithForEach(arr) {
     let sum = 0;
     arr.forEach(i => {
         sum += i;
@@ -34,7 +27,7 @@ function sumArray(arr) {
     return sum;
 }
 
-function sumArray2(arr) {
+function sumArrayWithFor(arr) {
     let sum = 0;
     for (let i = 0; i < arr.length; i++) {
         sum += arr[i];
@@ -42,7 +35,7 @@ function sumArray2(arr) {
     return sum;
 }
 
-function sumArray3(arr) {
+function sumArrayWithForOf(arr) {
     let sum = 0;
     for (const number of arr) {
         sum += number;
@@ -50,10 +43,9 @@ function sumArray3(arr) {
     return sum;
 }
 
-function largar() {
-    for (let i = 1; i <= 29; i++) {
-        console.log("quero largar");
-    }
-}
-
-largar();
+sum(2);
+multiply(10);
+skipNumber(3);
+console.log(sumArrayWithForEach([20, 10, 5]));
+console.log(sumArrayWithFor([20, 10, 5]));
+console.log(sumArrayWithForOf([20, 10, 5]));
