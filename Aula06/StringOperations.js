@@ -3,7 +3,7 @@ const string = "Você nunca encontrará tempo para nada. Se você quer tempo, de
 console.log(convertToLowerCase(string));
 console.log(extractSingleWord(string, "nunca"));
 console.log(extractSingleWord(string, "erik"));
-console.log(replaceWord(string, "nunca", "erik"));
+console.log(replaceWord(string, "nunca", "never"));
 
 function convertToLowerCase(string) {
     return string.toLowerCase();
