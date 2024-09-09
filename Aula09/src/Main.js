@@ -1,3 +1,8 @@
+/* Para rodar, digite no terminal:
+npm i
+node Main.js
+*/
+
 const read = require("readline-sync");
 
 const Programador = require('./Programador');
