@@ -13,7 +13,6 @@ let funcionarios = [];
 let running = true;
 
 while (running) {
-	adicionarFuncionarios();
 	console.log("\n# Gerenciamento de Funcionários");
 	console.log("#1 - Cadastrar novo funcionario\n#2 - Visualizar funcionarios\n#0 - Sair");
 	let escolha = parseInt(read.question("-> "));
@@ -96,45 +95,45 @@ function listarFuncionarios() {
 			let cargo = parseInt(read.question("# Qual cargo deseja filtrar?\n# 1 - Programador\n# 2 - Designer\n# 3 - Gerente\n-> "));
 			switch (cargo) {
 				case 1:
-                    listarFuncionariosPorCargo("Programador");
-                    break;
-                case 2:
-                    listarFuncionariosPorCargo("Designer");
-                    break;
-                case 3:
-                    listarFuncionariosPorCargo("Gerente");
-                    break;
-                default:
-                    console.log("Cargo inválido.");
-                    break;
+					listarFuncionariosPorCargo("Programador");
+					break;
+				case 2:
+					listarFuncionariosPorCargo("Designer");
+					break;
+				case 3:
+					listarFuncionariosPorCargo("Gerente");
+					break;
+				default:
+					console.log("Cargo inválido.");
+					break;
 			}
-            break;
-        case 2:
+			break;
+		case 2:
 			index = read.keyInSelect(funcionarios, 'Selecione algum funcionário para editar ou 0 para sair');
 			editarFuncionario(funcionarios[index]);
 		case 0:
 			return;
-        default:
-            console.log("Opção inválida.");
-            break;
+		default:
+			console.log("Opção inválida.");
+			break;
 	}
 }
 
 function listarFuncionariosPorCargo(cargo) { 
-    let funcionariosPorCargo = funcionarios.filter(funcionario => funcionario.cargo === cargo);
+	let funcionariosPorCargo = funcionarios.filter(funcionario => funcionario.cargo === cargo);
     
-    // Mapeia para uma exibição mais amigável
-    let funcionariosFormatados = funcionariosPorCargo.map(funcionario => funcionario.toString());
+	// Mapeia para uma exibição mais amigável
+	let funcionariosFormatados = funcionariosPorCargo.map(funcionario => funcionario.toString());
     
-    // Seleciona um funcionário
-    let index = read.keyInSelect(funcionariosFormatados, 'Selecione algum funcionário para editar ou 0 para sair');
+	// Seleciona um funcionário
+	let index = read.keyInSelect(funcionariosFormatados, 'Selecione algum funcionário para editar ou 0 para sair');
     
-    if (index !== -1) {
-        // Passa o funcionário selecionado para a função de edição
-        editarFuncionario(funcionariosPorCargo[index]);
-    } else {
-        console.log("Nenhum funcionário foi selecionado.");
-    }
+	if (index !== -1) {
+		// Passa o funcionário selecionado para a função de edição
+		editarFuncionario(funcionariosPorCargo[index]);
+	} else {
+		console.log("Nenhum funcionário foi selecionado.");
+	}
 }
 
 function editarFuncionario(funcionario) { 
@@ -146,79 +145,79 @@ function editarFuncionario(funcionario) {
 			escolha = parseInt(read.question("# Editar\n# 1 - Nome\n# 2 - Idade\n# 3 - Cargo\n# 4 - Salário\n# 5 - Linguagem de programação\n# 0 - Cancelar\n-> "));
 			switch (escolha) {
 				case 1:
-                    funcionario.nome = read.question("Novo nome: ");
-                    break;
-                case 2:
-                    funcionario.idade = parseInt(read.question("Nova idade: "));
-                    break;
-                case 3:
-                    funcionario.cargo = read.question("Novo cargo: ");
-                    break;
-                case 4:
-                    funcionario.salario = parseInt(read.question("Novo salário: "));
-                    break;
-                case 5:
-                    funcionario.linguagem = read.question("Nova linguagem de programação: ");
-                    break;
-                case 0:
-                    return;
-                default:
-                    console.log("Opção inválida.");
-                    return;
+					funcionario.nome = read.question("Novo nome: ");
+					break;
+				case 2:
+					funcionario.idade = parseInt(read.question("Nova idade: "));
+					break;
+				case 3:
+					funcionario.cargo = read.question("Novo cargo: ");
+					break;
+				case 4:
+					funcionario.salario = parseInt(read.question("Novo salário: "));
+					break;
+				case 5:
+					funcionario.linguagem = read.question("Nova linguagem de programação: ");
+					break;
+				case 0:
+					return;
+				default:
+					console.log("Opção inválida.");
+					return;
 			}
-            break;
-        case "Designer":
+			break;
+		case "Designer":
 			escolha = parseInt(read.question("# Editar\n# 1 - Nome\n# 2 - Idade\n# 3 - Cargo\n# 4 - Salário\n# 5 - Ferramenta de design\n# 0 - Cancelar"));
 			switch (escolha) {
 				case 1:
-                    funcionario.nome = read.question("Novo nome: ");
-                    break;
-                case 2:
-                    funcionario.idade = parseInt(read.question("Nova idade: "));
-                    break;
-                case 3:
-                    funcionario.cargo = read.question("Novo cargo: ");
-                    break;
-                case 4:
-                    funcionario.salario = parseInt(read.question("Novo salário: "));
-                    break;
-                case 5:
-                    funcionario.ferramenta = read.question("Nova ferramenta de design: ");
-                    break;
-                case 0:
-                    return;
-                default:
-                    console.log("Opção inválida.");
-                    return;
+					funcionario.nome = read.question("Novo nome: ");
+					break;
+				case 2:
+					funcionario.idade = parseInt(read.question("Nova idade: "));
+					break;
+				case 3:
+					funcionario.cargo = read.question("Novo cargo: ");
+					break;
+				case 4:
+					funcionario.salario = parseInt(read.question("Novo salário: "));
+					break;
+				case 5:
+					funcionario.ferramenta = read.question("Nova ferramenta de design: ");
+					break;
+				case 0:
+					return;
+				default:
+					console.log("Opção inválida.");
+					return;
 			}
 			break;
-        case "Gerente":
+		case "Gerente":
 			escolha = parseInt(read.question("# Editar\n# 1 - Nome\n# 2 - Idade\n# 3 - Cargo\n# 4 - Salário\n# 5 - Equipe de gerência\n# 0 - Cancelar"));
 			switch (escolha) {
 				case 1:
-                    funcionario.nome = read.question("Novo nome: ");
-                    break;
-                case 2:
-                    funcionario.idade = parseInt(read.question("Nova idade: "));
-                    break;
-                case 3:
-                    funcionario.cargo = read.question("Novo cargo: ");
-                    break;
-                case 4:
-                    funcionario.salario = parseInt(read.question("Novo salário: "));
-                    break;
-                case 5:
-                    funcionario.equipe = read.question("Nova equipe de gerência: ");
-                    break;
-                case 0:
-                    return;
-                default:
-                    console.log("Opção inválida.");
-                    return;
+					funcionario.nome = read.question("Novo nome: ");
+					break;
+				case 2:
+					funcionario.idade = parseInt(read.question("Nova idade: "));
+					break;
+				case 3:
+					funcionario.cargo = read.question("Novo cargo: ");
+					break;
+				case 4:
+					funcionario.salario = parseInt(read.question("Novo salário: "));
+					break;
+				case 5:
+					funcionario.equipe = read.question("Nova equipe de gerência: ");
+					break;
+				case 0:
+					return;
+				default:
+					console.log("Opção inválida.");
+					return;
 			}
 			break;
-        default:
-            console.log("Funcionário inválido.");
-            return;
+		default:
+			console.log("Funcionário inválido.");
+			return;
 	}
 }
